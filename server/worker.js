@@ -4,6 +4,7 @@ import { QdrantVectorStore } from '@langchain/qdrant';
 import { Document } from '@langchain/core/documents';
 import { PDFLoader } from '@langchain/community/document_loaders/fs/pdf';
 import { CharacterTextSplitter } from '@langchain/textsplitters';
+import 'dotenv/config';
 
 const worker = new Worker(
   'file-upload-queue',
@@ -24,7 +25,7 @@ const worker = new Worker(
 
     const embeddings = new OpenAIEmbeddings({
       model: 'text-embedding-3-small',
-      apiKey: process.env.API_KEY,
+      apiKey: process.env.OPENAI_API_KEY ,
     });
 
     const vectorStore = await QdrantVectorStore.fromExistingCollection(
