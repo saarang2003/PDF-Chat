@@ -8,11 +8,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node index.js"
+    "dev": "node index.js",
+    "dev:worker": "node worker.js"
   },
   "dependencies": {
     "@types/express": "^5.0.2",
     "@types/node": "^22.15.29",
+    "bullmq": "^5.53.1",
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "multer": "^2.0.0"

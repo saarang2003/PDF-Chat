@@ -19,7 +19,7 @@ const FileUploadComponent :React.FC = () =>{
             if (el.files && el.files.length > 0) {
               formData.append('pdf', el.files[0]);
             }
-
+            console.log("Preparing to upload file...");
             await fetch("http://localhost:8000/upload/pdf", {
                 method: "POST",
                 body: formData
