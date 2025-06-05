@@ -6,7 +6,7 @@ import * as React from 'react';
 
 interface Doc {
   pageContent?: string;
-  metdata?: {
+  metadata?: {
     loc?: {
       pageNumber?: number;
     };
@@ -26,27 +26,30 @@ const ChatComponent: React.FC = () => {
   console.log({ messages });
 
   const handleSendChatMessage = async () => {
-    setMessages((prev) => [...prev, { role: 'user', content: message }]);
-    const res = await fetch(`http://localhost:8000/chat?message=${message}`);
-    const data = await res.json();
-    setMessages((prev) => [
-      ...prev,
-      {
-        role: 'assistant',
-        content: data?.message,
-        documents: data?.docs,
-      },
-    ]);
+   const currentMessage = message;
+  setMessages((prev) => [...prev, { role: 'user', content: currentMessage }]);
+  setMessage('');
+  const res = await fetch(`http://localhost:8000/chat?message=${encodeURIComponent(currentMessage)}`);
+  const data = await res.json();
+  console.log("data" , data);
+  console.log("message" , data.message)
+  setMessages((prev) => [
+    ...prev,
+    {
+      role: 'assistant',
+      content: data?.message,
+    },
+  ]);
   };
 
   return (
-    <div className="p-4">
+    <div className="p-4 ">
       <div>
         {messages.map((message, index) => (
-          <pre key={index}>{JSON.stringify(message, null, 2)}</pre>
-        ))}
+    <pre key={index}>{JSON.stringify(message, null, 2)}</pre>
+  ))}
       </div>
-      <div className="fixed bottom-4 w-100 flex gap-3">
+      <div className="fixed bottom-4 w-[60%]  rounded-xl flex gap-3">
         <Input
           value={message}
           onChange={(e) => setMessage(e.target.value)}

@@ -27,10 +27,10 @@ const FileUploadComponent: React.FC = () => {
   };
 
   return (
-    <div className="bg-slate-900 text-white shadow-2xl flex justify-center items-center p-4 rounded-lg border-white border-2">
+    <div className="bg-slate-900 flex text-white shadow-2xl max-w-[70%] justify-center items-center p-4 rounded-lg hover:bg-gray-800 hover:scale-95 transition-transform duration-200 cursor-pointer border-white border-2">
       <div
         onClick={handleFileUploadButtonClick}
-        className="flex justify-center items-center flex-col"
+        className="flex justify-center items-center space-x-4 "
       >
         <h3>Upload PDF File</h3>
         <Upload />
