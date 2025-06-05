@@ -39,6 +39,59 @@ const ChatComponent: React.FC = () => {
     ]);
   };
 
+  // Function to format the message content
+  const formatMessageContent = (content: string | undefined) => {
+    if (!content) return null;
+
+    // Split the content into lines
+    const lines = content.split('\n');
+    const elements: React.JSX.Element[] = [];
+    let inList = false;
+
+    lines.forEach((line, index) => {
+      // Check if the line is a numbered list item (e.g., "1. **Virtual DOM**: ...")
+      const listMatch = line.match(/^(\d+)\.\s*\*\*(.*?)\*\*:(.*)/);
+      if (listMatch) {
+        const [, , title, description] = listMatch;
+        if (!inList) {
+          inList = true;
+          elements.push(
+            <ul key={`list-${index}`} className="list-decimal pl-5">
+              <li key={index} className="mb-2">
+                <strong>{title}:</strong> {description.trim()}
+              </li>
+            </ul>
+          );
+        } else {
+          // Add to the existing <ul>
+          const lastUl = elements[elements.length - 1];
+          if (lastUl.type === 'ul') {
+            lastUl.props.children.push(
+              <li key={index} className="mb-2">
+                <strong>{title}:</strong> {description.trim()}
+              </li>
+            );
+          }
+        }
+      } else {
+        // If we're in a list and this line isn't a list item, close the list
+        if (inList) {
+          inList = false;
+        }
+        // Add the line as a paragraph if it's not empty
+        if (line.trim()) {
+          elements.push(
+            <p key={index} className="mb-2">
+              {line}
+            </p>
+          );
+        }
+      }
+    });
+
+    return elements;
+  };
+
   return (
     <div className="p-4 h-screen flex flex-col">
       {/* Chat messages container */}
@@ -58,7 +111,11 @@ const ChatComponent: React.FC = () => {
               }`}
               style={{ wordBreak: 'break-word' }} // Ensures text wraps
             >
-              {msg.content}
+              {msg.role === 'assistant' ? (
+                <div>{formatMessageContent(msg.content)}</div>
+              ) : (
+                msg.content
+              )}
             </div>
           </div>
         ))}
