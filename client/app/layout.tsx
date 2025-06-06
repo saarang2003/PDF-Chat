@@ -35,15 +35,15 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
-          <section>
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
 
-          </section>
           <SignedIn>{children}</SignedIn>
+          <SignedOut>{children}</SignedOut>
         </body>
       </html>
     </ClerkProvider>
   );
 }
+
+
+

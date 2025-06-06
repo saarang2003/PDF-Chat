@@ -1,20 +1,26 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-"use client"
-import FileUploadComponent from './components/file-upload';
-import ChatComponent from './components/chat';
-import Landing from './components/Landing';
-import ScrollImage from './components/ScrollImage';
-import Header from './components/Header';
+"use client";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { useUser } from "@clerk/nextjs";
 
-
+import Landing from "./components/Landing";
+import Header from "./components/Header";
 
 
 export default function Home() {
+  const { isSignedIn } = useUser();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (isSignedIn) {
+      router.push("/chat");
+    }
+  }, [isSignedIn, router]);
 
   return (
     <div>
-     <Header/>
-     <Landing/>
+      <Header/>
+      <Landing />
     </div>
   );
 }
