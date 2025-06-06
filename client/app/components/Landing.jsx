@@ -12,7 +12,7 @@ function Landing() {
       <div className="absolute  inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]"></div>
 
  {/* badge */}
-  <div className="z-10 flex mt-2 items-center justify-center">
+  <div className="z-10 flex mt-16 items-center justify-center">
       <div
         className={cn(
           "group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800",
@@ -28,7 +28,7 @@ function Landing() {
 {/* Heading */}
    <div >
   <section className="  dark:bg-gray-900">
-    <div className="py-8 px-4 mx-auto  max-w-screen-xl text-center lg:mb-2 lg:px-12">
+    <div className="py-8 px-4 mx-auto    max-w-screen-xl text-center lg:mb-2 lg:px-12">
       <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
         We invest in the world’s potential
       </h1>
@@ -61,7 +61,7 @@ function Landing() {
 
 
 {/* Hero image */}
-<div className="px-4 mx-auto max-w-screen-xl text-center mt-[-20px]">
+<div className="px-4 mx-auto   max-w-screen-xl text-center mt-[-20px]">
     <ContainerScroll>
       <Image 
       src='/home.png'
@@ -75,8 +75,8 @@ function Landing() {
 
 
 {/* pricing */}
-<div className='border-2 border-amber-300 w-full' >
-<div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+<div className='w-full' >
+<div className="mx-auto max-w-3xl px-4 mt-[-200] sm:px-6 sm:py-12 lg:px-8">
   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-center md:gap-8">
     <div
       className="rounded-2xl border border-indigo-600 p-6 shadow-xs ring-1 ring-indigo-600 sm:order-last sm:px-8 lg:p-12"
@@ -283,8 +283,8 @@ function Landing() {
 
 {/* footer */}
 
-<div className='border-2 border-amber-300 w-full'>
-<footer class="bg-white dark:bg-gray-900">
+<div className=' w-full'>
+<footer class="bg-white mb-20 dark:bg-gray-900">
     <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
