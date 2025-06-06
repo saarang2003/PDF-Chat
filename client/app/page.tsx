@@ -2,6 +2,8 @@
 import FileUploadComponent from './components/file-upload';
 import ChatComponent from './components/chat';
 import Landing from './components/Landing';
+import ScrollImage from './components/ScrollImage';
+import Header from './components/Header';
 
 export default function Home() {
   return (
@@ -14,7 +16,8 @@ export default function Home() {
           <ChatComponent />
         </div>
       </div> */}
-     <Landing/>
+     {/* <Landing/> */}
+     <Header/>
     </div>
   );
 }
