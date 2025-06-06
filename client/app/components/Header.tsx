@@ -1,6 +1,9 @@
+import { SignInButton, SignUpButton } from "@clerk/nextjs";
 import React from "react";
 
 function Header() {
+
+
   return (
     <div>
       <header >
@@ -70,19 +73,25 @@ function Header() {
 
           {/* Right: Buttons */}
           <div className="flex items-center gap-4">
+
             <div className="sm:flex sm:gap-4">
+              <SignInButton>
               <a
                 className="block rounded-md bg-violet-500 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-violet-500"
                 href="#"
               >
                 Login
               </a>
+                </SignInButton>
+
+              <SignUpButton>
               <a
                 className="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-violet-500 transition hover:text-violet-500/75 sm:block"
                 href="#"
               >
                 Register
               </a>
+              </SignUpButton>
             </div>
 
             {/* Mobile Menu Button */}
