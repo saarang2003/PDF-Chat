@@ -3,10 +3,10 @@ import React from "react";
 function Header() {
   return (
     <div>
-      <header className="bg-white">
-        <div className="mx-auto flex h-16 max-w-screen-xl items-center justify-between px-4 sm:px-6 lg:px-8 border-2 border-red-500">
+      <header >
+        <div className="mx-auto flex h-16 max-w-screen-xl items-center justify-between px-4 sm:px-6 lg:px-8">
           {/* Left: Logo */}
-          <a className="block text-teal-600" href="#">
+          <a className="block text-violet-500" href="#">
             <span className="sr-only">Home</span>
             {/* SVG logo */}
             <svg
@@ -27,7 +27,7 @@ function Header() {
             <ul className="flex items-center gap-8 text-sm justify-center">
               <li>
                 <a
-                  className="text-gray-500 transition hover:text-gray-500/75"
+                  className="text-gray-500 transition hover:text-violet-500/75"
                   href="#"
                 >
                   Home
@@ -35,7 +35,7 @@ function Header() {
               </li>
               <li>
                 <a
-                  className="text-gray-500 transition hover:text-gray-500/75"
+                  className="text-gray-500 transition hover:text-violet-500/75"
                   href="#"
                 >
                   Product
@@ -43,7 +43,7 @@ function Header() {
               </li>
               <li>
                 <a
-                  className="text-gray-500 transition hover:text-gray-500/75"
+                  className="text-gray-500 transition hover:text-violet-500/75"
                   href="#"
                 >
                   Resources
@@ -51,7 +51,7 @@ function Header() {
               </li>
               <li>
                 <a
-                  className="text-gray-500 transition hover:text-gray-500/75"
+                  className="text-gray-500 transition hover:text-violet-500/75"
                   href="#"
                 >
                   About Us
@@ -59,7 +59,7 @@ function Header() {
               </li>
               <li>
                 <a
-                  className="text-gray-500 transition hover:text-gray-500/75"
+                  className="text-gray-500 transition hover:text-violet-500/75"
                   href="#"
                 >
                   FAQ
@@ -72,13 +72,13 @@ function Header() {
           <div className="flex items-center gap-4">
             <div className="sm:flex sm:gap-4">
               <a
-                className="block rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700"
+                className="block rounded-md bg-violet-500 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-violet-500"
                 href="#"
               >
                 Login
               </a>
               <a
-                className="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 transition hover:text-teal-600/75 sm:block"
+                className="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-violet-500 transition hover:text-violet-500/75 sm:block"
                 href="#"
               >
                 Register

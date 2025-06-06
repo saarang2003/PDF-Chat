@@ -16,8 +16,8 @@ export default function Home() {
           <ChatComponent />
         </div>
       </div> */}
-     {/* <Landing/> */}
      <Header/>
+     <Landing/>
     </div>
   );
 }
