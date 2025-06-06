@@ -33,7 +33,7 @@ const FileUploadComponent: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen w-full p-4">
+    <div className="flex flex-col h-screen w-full p-4" suppressHydrationWarning>
       {/* Upload button */}
       <div
         className="bg-slate-900 flex text-white shadow-2xl justify-center items-center p-4 rounded-lg hover:bg-gray-800 hover:scale-95 transition-transform duration-200 cursor-pointer border-white border-2 mb-4"

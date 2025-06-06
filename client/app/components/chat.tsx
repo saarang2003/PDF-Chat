@@ -24,6 +24,22 @@ const ChatComponent: React.FC = () => {
   const [message, setMessage] = React.useState<string>('');
   const [messages, setMessages] = React.useState<IMessage[]>([]);
 
+
+    // Load messages from localStorage on component mount
+  React.useEffect(() => {
+    const storedMessages = localStorage.getItem('chatMessages');
+    if (storedMessages) {
+      setMessages(JSON.parse(storedMessages));
+    }
+  }, []);
+
+  // Save messages to localStorage whenever they change
+  React.useEffect(() => {
+    if (messages.length > 0) {
+      localStorage.setItem('chatMessages', JSON.stringify(messages));
+    }
+  }, [messages]);
+
   const handleSendChatMessage = async () => {
     const currentMessage = message;
     setMessages((prev) => [...prev, { role: 'user', content: currentMessage }]);
@@ -93,7 +109,7 @@ const ChatComponent: React.FC = () => {
   };
 
   return (
-    <div className="p-4 h-screen flex flex-col">
+    <div className="p-4 h-screen flex flex-col" suppressHydrationWarning>
       {/* Chat messages container */}
       <div className="flex-1 overflow-y-auto mb-4">
         {messages.map((msg, index) => (
