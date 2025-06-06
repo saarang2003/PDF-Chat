@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils'
 import { ArrowRightIcon } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
-import { motion } from 'framer-motion'
+
 
 function Landing() {
   return (
@@ -15,10 +15,10 @@ function Landing() {
   <div className="z-10 flex mt-16 items-center justify-center">
       <div
         className={cn(
-          "group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800",
+          "group rounded-full border border-black/5 bg-violet-200 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-violet-400 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800",
         )}
       >
-        <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
+        <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-white hover:duration-300 hover:dark:text-neutral-400">
           <span>✨ Introducing PDF-CHAT</span>
           <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
         </AnimatedShinyText>
@@ -79,7 +79,7 @@ function Landing() {
 <div className="mx-auto max-w-3xl px-4 mt-[-200] sm:px-6 sm:py-12 lg:px-8">
   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:items-center md:gap-8">
     <div
-      className="rounded-2xl border border-indigo-600 p-6 shadow-xs ring-1 ring-indigo-600 sm:order-last sm:px-8 lg:p-12"
+      className="rounded-2xl border border-violet-600 p-6 shadow-xs ring-1 ring-violet-600 sm:order-last sm:px-8 lg:p-12"
     >
       <div className="text-center">
         <h2 className="text-lg font-medium text-gray-900">
@@ -102,7 +102,7 @@ function Landing() {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="size-5 text-indigo-700 shadow-sm"
+            className="size-5 text-violet-700 shadow-sm"
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
           </svg>
@@ -117,7 +117,7 @@ function Landing() {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="size-5 text-indigo-700 shadow-sm"
+            className="size-5 text-violet-700 shadow-sm"
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
           </svg>
@@ -132,7 +132,7 @@ function Landing() {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="size-5 text-indigo-700 shadow-sm"
+            className="size-5 text-violet-700 shadow-sm"
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
           </svg>
@@ -162,7 +162,7 @@ function Landing() {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="size-5 text-indigo-700 shadow-sm"
+            className="size-5 text-violet-700 shadow-sm"
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
           </svg>
@@ -177,7 +177,7 @@ function Landing() {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
-            className="size-5 text-indigo-700 shadow-sm"
+            className="size-5 text-violet-700 shadow-sm"
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
           </svg>
@@ -188,7 +188,7 @@ function Landing() {
 
       <a
         href="#"
-        className="mt-8 block rounded-full border border-indigo-600 bg-indigo-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-indigo-700 hover:ring-1 hover:ring-indigo-700 focus:ring-3 focus:outline-hidden"
+        className="mt-8 block rounded-full border border-indigo-600 bg-violet-600 px-12 py-3 text-center text-sm font-medium text-white hover:bg-violet-700 hover:ring-1 hover:ring-violet-700 focus:ring-3 focus:outline-hidden"
       >
         Get Started
       </a>
@@ -290,18 +290,15 @@ function Landing() {
           <div class="mb-6 md:mb-0">
               <a href="https://flowbite.com/" class="flex items-center">
                   <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="FlowBite Logo" />
-                  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+                  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">PDF_CHAT</span>
               </a>
           </div>
           <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
                   <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
                   <ul class="text-gray-500 dark:text-gray-400 font-medium">
-                      <li class="mb-4">
-                          <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
-                      </li>
                       <li>
-                          <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                          <a href="https://tailwindcss.com/" class="hover:underline">Resource</a>
                       </li>
                   </ul>
               </div>
@@ -331,7 +328,7 @@ function Landing() {
       </div>
       <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
       <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
+          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="#" class="hover:underline">PDF_CHAT</a>. All Rights Reserved.
           </span>
           <div class="flex mt-4 sm:justify-center sm:mt-0">
               <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
